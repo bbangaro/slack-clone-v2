@@ -1,22 +1,23 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "lib": ["ES2020", "DOM"],
-    "jsx": "react",
-    "module": "esnext",
-    "moduleResolution": "Node",
-    "target": "es5",
-    "strict": true,
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@hooks/*": ["hooks/*"],
-      "@components/*": ["components/*"],
-      "@layouts/*": ["layouts/*"],
-      "@pages/*": ["pages/*"],
-      "@utils/*": ["utils/*"],
-      "@typings/*": ["typings/*"]
+    "compilerOptions": {
+        "esModuleInterop": true, // import * as React from 'react'; ->  import \React from 'react'; * as 생략 가능
+        "sourceMap": true, // 에러난 위치 찾아가기
+        "lib": ["ES2020", "DOM"],
+        "jsx": "react", // 다른 프로그래밍에도 쓰여서..
+        "module": "esnext", // 최신 모듈 쓰겠다. (import, export..)
+        "moduleResolution": "Node", // (import, export..)도 Node가 해석 가능하게 하겠다.
+        "target": "es5", // ES2020으로 작성해도 es5로 변환 하겠다.
+        "strict": true, // 타입체킹 엄격 (any 사용 금지!)
+        "resolveJsonModule": true, // import .json 허락 하겠다.
+        // webpack.config.ts의 alias 설정
+        "baseUrl": ".",
+        "paths": {
+            "@hooks/*": ["hooks/*"],
+            "@components/*": ["components/*"],
+            "@layouts/*": ["layouts/*"],
+            "@pages/*": ["pages/*"],
+            "@utils/*": ["utils/*"],
+            "@typings/*": ["typings/*"]
+        }
     }
-  }
 }
